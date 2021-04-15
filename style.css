@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 95vw;
+}
+
+.panel {
+  background-size: auto cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 6;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel_four,
+  .panel_five {
+    display: none;
+  }
+}
+
+.panel_one {
+  background-image: url(/images/winter.jpg);
+  background-size: cover;
+}
+
+.panel_two {
+  background-image: url(/images/colton-jones-hUMvoyEaB7A-unsplash.jpg);
+  background-size: cover;
+}
+.panel_three {
+  background-image: url(/images/colton-jones-cZrbpwSPRqE-unsplash.jpg);
+  background-size: cover;
+}
+.panel_four {
+  background-image: url(/images/reflection.jpg);
+  background-size: cover;
+}
+.panel_five {
+  background-image: url(/images/beach.jpg);
+  background-size: cover;
+}
